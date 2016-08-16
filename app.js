@@ -9,7 +9,7 @@ const app = express();
 
 // Routes
 const indexRoutes = require('./routes/indexRoutes');
-const nitroRoutes = require('./routes/nitroRoutes')
+const dataRoutes = require('./routes/dataRoutes')
 
 const port = process.env.PORT || 3000;
 const portIP = process.env.IP;
@@ -24,7 +24,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 // Use Routes
 app.use('/', indexRoutes);
-app.use('/', nitroRoutes);
+app.use('/', dataRoutes);
 
 
 app.listen(port, portIP, function() {

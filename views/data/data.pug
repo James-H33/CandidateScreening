@@ -1,0 +1,23 @@
+include ../partials/header
+
+section.data-wrapper
+    div.data-display
+        div.table-wrapper
+            table
+                tr
+                    th Username
+                    th email
+                    th address
+                    th website
+                - for (var i = 0; i < 15; i++) {
+                    tr
+                        td #{data[i].username}
+                        td #{data[i].email}
+                        td #{data[i].address.street}
+                        td #{data[i].website}
+                - }
+
+
+
+
+include ../partials/footer
