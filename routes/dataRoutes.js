@@ -5,9 +5,10 @@ const request     = require('request');
 
 // Client Request
 router.get('/users', function(req, res, next) {
+    var query = 0;
 
     var options = {
-        url: 'https://jsonplaceholder.typicode.com/users',
+        url: 'http://jsonplaceholder.typicode.com/users',
     }
 
     request(options, function(error, response, body) {

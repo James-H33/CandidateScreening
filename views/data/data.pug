@@ -5,13 +5,13 @@ section.data-wrapper
         div.table-wrapper
             table
                 tr
-                    th Username
-                    th email
-                    th address
-                    th website
-                - for (var i = 0; i < 15; i++) {
+                    th Name
+                    th Email
+                    th Address
+                    th Website
+                - for (var i = 0; i < 10; i++) {
                     tr
-                        td #{data[i].username}
+                        td #{data[i].name}
                         td #{data[i].email}
                         td #{data[i].address.street}
                         td #{data[i].website}

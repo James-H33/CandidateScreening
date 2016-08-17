@@ -1,0 +1,51 @@
+include ../partials/header
+
+- if(customers)
+    section.data-wrapper
+        div.data-display
+            div.table-wrapper
+                table
+                    tr
+                        th Name
+                        th Address
+                        th City
+                        th State
+                    - data.forEach(function(item) {
+                        tr
+                            td #{item.name}
+                            td #{item.address}
+                            td #{item.city}
+                            td #{item.state}
+                    - });
+            div.page-select
+                a(href="/customers/1") Page 1
+                a(href="/customers/2") Page 2
+                a(href="/customers/3") Page 3
+
+
+- if(items)
+    section.data-wrapper
+        div.data-display
+            div.table-wrapper
+                table
+                    tr
+                        th Name
+                        th Cost
+                        th Seller
+                        th Bids
+                    - data.forEach(function(item) {
+                        tr
+                            td #{item.name}
+                            td #{item.cost}
+                            td #{item.seller}
+                            td #{item.bids}
+                    - });
+            div.page-select
+                a(href="/items/1") Page 1
+                a(href="/items/2") Page 2
+                a(href="/items/3") Page 3
+
+
+
+
+include ../partials/footer

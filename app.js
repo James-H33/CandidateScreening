@@ -9,7 +9,8 @@ const app = express();
 
 // Routes
 const indexRoutes = require('./routes/indexRoutes');
-const dataRoutes = require('./routes/dataRoutes')
+const dataRoutes  = require('./routes/dataRoutes');
+const sqlRoutes   = require('./routes/sqlRoutes');
 
 const port = process.env.PORT || 3000;
 const portIP = process.env.IP;
@@ -25,6 +26,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // Use Routes
 app.use('/', indexRoutes);
 app.use('/', dataRoutes);
+app.use('/', sqlRoutes);
 
 
 app.listen(port, portIP, function() {
